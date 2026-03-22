@@ -1,26 +1,16 @@
-# --- Virtual environments ---
+# Virtual environments
 venv/
 .venv/
 env/
 ENV/
 .env.venv/
 
-# --- Python bytecode & caches ---
+# Python
 __pycache__/
 *.py[cod]
 *$py.class
 *.so
 .Python
-.mypy_cache/
-.dmypy.json
-dmypy.json
-.ruff_cache/
-.pytype/
-.pyre/
-.pytest_cache/
-.hypothesis/
-
-# --- Packaging / build ---
 *.egg
 *.egg-info/
 .eggs/
@@ -41,15 +31,15 @@ MANIFEST
 .installed.cfg
 lib64/
 
-# --- Environment & secrets ---
-.env
-.env.*
-!.env.example
-*.pem
-*.key
-secrets.json
+# Type checkers / linters (optional local tools)
+.mypy_cache/
+.dmypy.json
+dmypy.json
+.ruff_cache/
 
-# --- Testing & coverage ---
+# Testing (unittest, pytest, coverage)
+.pytest_cache/
+.hypothesis/
 .coverage
 .coverage.*
 coverage.xml
@@ -59,27 +49,37 @@ htmlcov/
 .nox/
 nosetests.xml
 
-# --- Flask ---
+# Environment and secrets
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+secrets.json
+
+# Flask
 instance/
 .webassets-cache
 
-# --- Logs & databases (local dev) ---
+# Logs
 *.log
 logs/
-*.sqlite3
+
+# Local databases (SQLite and similar)
 *.db
+*.db-shm
+*.db-wal
+*.sqlite
+*.sqlite3
+*.sqlite3-shm
+*.sqlite3-wal
 
-# --- Jupyter (if you use notebooks later) ---
-.ipynb_checkpoints/
-
-# --- IDE / editors ---
+# Editors and OS
 .idea/
 .vscode/
 *.swp
 *.swo
 *~
-
-# --- OS ---
 .DS_Store
 .AppleDouble
 .LSOverride

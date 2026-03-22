@@ -1,36 +1,42 @@
 # notes-cicd-app
 
-A minimal Flask notes application using the app factory pattern and a single blueprint.
+Small Flask learning project: app factory, one blueprint, and a simple notes-style homepage. No database or authentication yet.
+
+## Prerequisites
+
+- Python 3.10+ (3.11+ recommended)
+- A virtual environment (see below)
 
 ## Setup
 
-Create and activate a virtual environment, then install dependencies:
-
 ```bash
+python -m venv venv
+source venv/bin/activate   # Windows: venv\Scripts\activate
 pip install -r requirements.txt
 ```
 
-## Run locally
+## Run
 
 ```bash
 python run.py
 ```
 
-Open [http://127.0.0.1:5000/](http://127.0.0.1:5000/) in your browser.
+Then open [http://127.0.0.1:5000/](http://127.0.0.1:5000/).
 
-## Run tests
-
-Uses the standard library only:
+## Tests
 
 ```bash
 python -m unittest discover -s tests -p "test_*.py"
 ```
 
-## Layout
+## Project layout
 
-- `app/` — application package (`create_app`, blueprint routes)
-- `templates/` — Jinja2 templates
-- `static/` — CSS, JS, images
-- `tests/` — unit tests (expand as you add features)
+| Path | Purpose |
+|------|---------|
+| `app/` | Application package (`create_app`, routes blueprint) |
+| `templates/` | Jinja templates |
+| `static/` | CSS and other static assets |
+| `tests/` | Unit tests |
+| `run.py` | Local development entry point |
 
-Database integration can be wired in `create_app` later (for example with Flask-SQLAlchemy).
+`instance/` (Flask) and local `.env` files are ignored by Git and are intended for later configuration and data.

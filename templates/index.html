@@ -7,9 +7,50 @@
   <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
-  <main class="page">
-    <h1>notes-cicd-app</h1>
-    <p>A minimal Flask notes app. Database and more routes can be added later.</p>
-  </main>
+  <div class="layout">
+    <main class="card card--main">
+      <header class="hero">
+        <h1 class="hero__title">notes-cicd-app</h1>
+        <p class="hero__subtitle">Capture quick ideas. Saving notes comes in a later step.</p>
+      </header>
+
+      <section class="section" aria-labelledby="add-heading">
+        <h2 id="add-heading" class="section__title">Add a note</h2>
+        <p class="section__hint">This form is for layout only — it does not save yet.</p>
+        <div class="note-form">
+          <label class="sr-only" for="note-body">Note text</label>
+          <textarea
+            id="note-body"
+            class="note-form__textarea"
+            rows="4"
+            placeholder="Write something short…"
+          ></textarea>
+          <button type="button" class="btn btn--primary">Add note</button>
+        </div>
+      </section>
+
+      <section class="section" aria-labelledby="recent-heading">
+        <h2 id="recent-heading" class="section__title">Recent notes</h2>
+        <ul class="note-list">
+          <li class="note-card">
+            <p class="note-card__text">Pick up milk on the way home.</p>
+            <span class="note-card__meta">Sample</span>
+          </li>
+          <li class="note-card">
+            <p class="note-card__text">Read the Flask docs on blueprints again.</p>
+            <span class="note-card__meta">Sample</span>
+          </li>
+          <li class="note-card">
+            <p class="note-card__text">CI idea: run tests on every push.</p>
+            <span class="note-card__meta">Sample</span>
+          </li>
+        </ul>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>notes-cicd-app — a small Flask starter</p>
+    </footer>
+  </div>
 </body>
 </html>

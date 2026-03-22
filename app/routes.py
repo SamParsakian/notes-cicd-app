@@ -8,6 +8,11 @@ bp = Blueprint("main", __name__)
 _notes: list[str] = []
 
 
+def reset_notes() -> None:
+    """Clear stored notes (used by the test suite)."""
+    _notes.clear()
+
+
 @bp.route("/", methods=["GET", "POST"])
 def index():
     if request.method == "POST":

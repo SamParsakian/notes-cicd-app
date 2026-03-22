@@ -26,7 +26,7 @@ Then open [http://127.0.0.1:5000/](http://127.0.0.1:5000/).
 ## Tests
 
 ```bash
-python -m unittest discover -s tests -p "test_*.py"
+pytest
 ```
 
 ## Project layout

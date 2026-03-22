@@ -1,0 +1,88 @@
+# --- Virtual environments ---
+venv/
+.venv/
+env/
+ENV/
+.env.venv/
+
+# --- Python bytecode & caches ---
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+.mypy_cache/
+.dmypy.json
+dmypy.json
+.ruff_cache/
+.pytype/
+.pyre/
+.pytest_cache/
+.hypothesis/
+
+# --- Packaging / build ---
+*.egg
+*.egg-info/
+.eggs/
+develop-eggs/
+dist/
+build/
+downloads/
+eggs/
+parts/
+sdist/
+var/
+wheels/
+pip-wheel-metadata/
+share/python-wheels/
+*.manifest
+*.spec
+MANIFEST
+.installed.cfg
+lib64/
+
+# --- Environment & secrets ---
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+secrets.json
+
+# --- Testing & coverage ---
+.coverage
+.coverage.*
+coverage.xml
+*.cover
+htmlcov/
+.tox/
+.nox/
+nosetests.xml
+
+# --- Flask ---
+instance/
+.webassets-cache
+
+# --- Logs & databases (local dev) ---
+*.log
+logs/
+*.sqlite3
+*.db
+
+# --- Jupyter (if you use notebooks later) ---
+.ipynb_checkpoints/
+
+# --- IDE / editors ---
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# --- OS ---
+.DS_Store
+.AppleDouble
+.LSOverride
+Thumbs.db
+ehthumbs.db
+Desktop.ini

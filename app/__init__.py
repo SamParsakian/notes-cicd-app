@@ -1,5 +1,6 @@
 """Application factory for notes-cicd-app."""
 
+import os
 from pathlib import Path
 
 from flask import Flask
@@ -15,6 +16,10 @@ def create_app(test_config=None):
     )
     app.config.from_mapping(
         SECRET_KEY="dev",
+        DATABASE_URL=os.getenv(
+            "DATABASE_URL",
+            "postgresql://notes:notes@localhost:5432/notes",
+        ),
     )
     if test_config is not None:
         app.config.from_mapping(test_config)

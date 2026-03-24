@@ -5,6 +5,11 @@ services:
       POSTGRES_DB: notes
       POSTGRES_USER: notes
       POSTGRES_PASSWORD: notes
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U notes -d notes"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
 
   app:
     build: .
@@ -14,4 +19,5 @@ services:
       DATABASE_URL: postgresql://notes:notes@db:5432/notes
       PORT: 5000
     depends_on:
-      - db
+      db:
+        condition: service_healthy

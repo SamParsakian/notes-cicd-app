@@ -37,6 +37,9 @@
           {% for note in notes %}
           <li class="note-card">
             <p class="note-card__text">{{ note }}</p>
+            <form method="POST" action="/delete/{{ loop.index0 }}">
+              <button type="submit" class="btn">Delete</button>
+            </form>
           </li>
           {% endfor %}
         </ul>

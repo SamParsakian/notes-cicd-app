@@ -75,3 +75,16 @@ def index():
                 notes = [row[0] for row in cur.fetchall()]
 
     return render_template("index.html", notes=notes)
+
+
+@bp.route("/delete/<int:note_index>", methods=["POST"])
+def delete_note(note_index: int):
+    if _ensure_db_initialized():
+        with _connect() as conn:
+            with conn.cursor() as cur:
+                cur.execute("SELECT id FROM notes ORDER BY id DESC;")
+                note_ids = [row[0] for row in cur.fetchall()]
+                if 0 <= note_index < len(note_ids):
+                    cur.execute("DELETE FROM notes WHERE id = %s;", (note_ids[note_index],))
+
+    return redirect(url_for("main.index"))

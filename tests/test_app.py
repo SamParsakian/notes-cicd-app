@@ -15,14 +15,20 @@ def client_db():
 
     database_url = os.environ["DATABASE_URL"]
     with psycopg.connect(database_url, autocommit=True) as conn:
-        with conn.cursor() as cur:
-            cur.execute("DELETE FROM notes;")
+        conn.execute(
+            """
+            CREATE TABLE IF NOT EXISTS notes (
+                id SERIAL PRIMARY KEY,
+                body TEXT NOT NULL
+            );
+            """
+        )
+        conn.execute("DELETE FROM notes;")
 
     yield client
 
     with psycopg.connect(database_url, autocommit=True) as conn:
-        with conn.cursor() as cur:
-            cur.execute("DELETE FROM notes;")
+        conn.execute("DELETE FROM notes;")
 
 
 def test_create_and_delete_note_postgres_flow(client_db):

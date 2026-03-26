@@ -89,3 +89,7 @@ Tests are also run automatically in GitHub Actions CI.
 - No HTTPS/domain setup yet
 - No database migrations yet
 - No authentication/authorization yet
+
+## Demo
+
+[![Watch CI/CD Demo](https://img.youtube.com/vi/erJZGUBkb6c/0.jpg)](https://youtu.be/erJZGUBkb6c)

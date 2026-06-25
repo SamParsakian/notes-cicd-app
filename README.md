@@ -90,6 +90,6 @@ Tests are also run automatically in GitHub Actions CI.
 - No database migrations yet
 - No authentication/authorization yet
 
-## Demo
+## CI/CD pipeline demo video:
 
-[![Watch CI/CD Demo](https://img.youtube.com/vi/erJZGUBkb6c/0.jpg)](https://youtu.be/erJZGUBkb6c)
+[![Watch CI/CD Demo](https://img.youtube.com/vi/erJZGUBkb6c/maxresdefault.jpg)](https://youtu.be/erJZGUBkb6c)

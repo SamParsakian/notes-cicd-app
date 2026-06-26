@@ -92,4 +92,4 @@ Tests are also run automatically in GitHub Actions CI.
 
 ## CI/CD pipeline demo video:
 
-[![Watch CI/CD Demo](https://img.youtube.com/vi/erJZGUBkb6c/maxresdefault.jpg)](https://youtu.be/erJZGUBkb6c)
+[![Watch CI/CD Demo](https://img.youtube.com/vi/1flKl2yMBd8/maxresdefault.jpg)](https://youtu.be/1flKl2yMBd8)
